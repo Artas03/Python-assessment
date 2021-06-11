@@ -1,6 +1,11 @@
-def five(input):
-	import math
-	for j in range(1,11):
-		return math.factorial(input)
+def six(string, int, char):
+	if int < 0:
+		return False
+	elif int > len(string):
+		return False
+	elif string[int-1].lower() == char:
+		return True
+	else:
+		return False
 
-print(five(12))
+print(six("Hi-There", 10, "e"))
