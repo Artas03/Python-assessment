@@ -120,14 +120,14 @@ def three(input):
 
 
 def four(input):
-	a = "ie"
-	b = "cei"
-	c = "cie"
-	if c in input:
+	d = "ie"
+	e = "cei"
+	f = "cie"
+	if f in input:
 		return False
-	elif a in input:
+	elif d in input:
 		return True
-	elif b in input:
+	elif e in input:
 		return True
 	else:
 		return False
@@ -174,7 +174,14 @@ def five(input):
 	# How do we find the length of a container, take a look at help(len), you will also need to look at help(str) for String manipulation.
  
 def six(string, int, char):
-	return False
+	if int < 0:
+		return False
+	elif int > len(string):
+		return False
+	elif string[int-1].lower() == char:
+		return True
+	else:
+		return False
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
@@ -197,7 +204,11 @@ def six(string, int, char):
 	# Take a look at the documentation for Strings, List and range.
 
 def seven(inputString, char):
-	return -1
+	x = inputString.replace(" ","")
+	if char in x:
+		return (x.index(char)+1)
+	else:
+		return -1
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
