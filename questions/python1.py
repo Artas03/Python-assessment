@@ -36,7 +36,12 @@
 	# What was the name of the function we have seen to check the length of a container?  Use your CLI to access the Python documentation and get help(len).
 
 def one(input1, input2):
-	return ""
+	if len(input1) > len(input2):
+        return input1
+    elif len(input1) < len(input2):
+        return input2
+    else:
+        return input1 + input2
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
@@ -60,7 +65,14 @@ def one(input1, input2):
 	# No hints for this question
 
 def two(arg1):
-	return "null"
+    if (arg1%3 == 0 and arg1%5 == 0):
+        return "fizzbuzz"
+    elif arg1%3 == 0:
+        return "fizz"
+    elif arg1%5 == 0:
+        return "buzz"
+    else:
+        return "null"
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
@@ -79,7 +91,13 @@ def two(arg1):
 	# How do we ignore case in a String? help(str) may offer some insight.
 
 def three(input):
-    return 0
+	vowels = "aeiou"
+	sum = 0
+	a = input.lower() 
+	for i in range(len(a)):
+		if a[i] in vowels:
+			sum+=1
+	return sum
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
@@ -102,7 +120,17 @@ def three(input):
 
 
 def four(input):
-    return False
+	a = "ie"
+	b = "cei"
+	c = "cie"
+	if c in input:
+		return False
+	elif a in input:
+		return True
+	elif b in input:
+		return True
+	else:
+		return False
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
@@ -122,7 +150,9 @@ def four(input):
 	# You may need to create a list of numbers from 0 to i, take a look at help(range).
 
 def five(input):
-	return 1
+	import math
+	for j in range(1,11):
+		return math.factorial(input)
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
